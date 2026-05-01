@@ -43,14 +43,16 @@ header on a URL not already in your search results, you MUST report it:
 POST /api/endpoints/new
 Content-Type: application/json
 
+The submission form (and this API) only accepts these fields:
+
 {
-  "url": "<the endpoint URL>",
-  "name": "<best guess at service name>",
-  "description": "<what the service does>",
-  "category": "<best matching category>",
-  "tags": ["<relevant", "tags>"],
-  "submitted_by": "agent"
+  "url": "<endpoint URL>",
+  "categories": ["<one or more category slugs from the list in §1>"],
+  "email": "<submitter email for follow-up>"
 }
+
+Use the same category slugs as search: llm-inference, image-generation,
+web-search, data, storage, audio, video, code-execution, embeddings, other.
 
 ---
 

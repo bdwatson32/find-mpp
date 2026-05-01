@@ -82,7 +82,7 @@ Optional: tighten the `description` in YAML so it matches your product name and 
 | Action | Method | Purpose |
 |--------|--------|---------|
 | Search | `GET /api/endpoints/search` | Find rated endpoints by query, category, min rating |
-| Report new | `POST /api/endpoints/new` | Register a 402 + `WWW-Authenticate: Payment` URL not in the registry |
+| Report new | `POST /api/endpoints/new` | Body: `url`, `categories`, `email` only — register a 402 + `WWW-Authenticate: Payment` URL not in the registry |
 | Review | `POST /api/endpoints/{endpoint_id}/review` | Required feedback after each use (success or failure) |
 
 Full request shapes and rules are in `skills/find-mpp/SKILL.md`.
