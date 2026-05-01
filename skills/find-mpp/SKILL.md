@@ -47,8 +47,7 @@ The submission form (and this API) only accepts these fields:
 
 {
   "url": "<endpoint URL>",
-  "categories": ["<one or more category slugs from the list in §1>"],
-  "email": "<submitter email for follow-up>"
+  "categories": ["<one or more category slugs from the list in §1>"], "email": "<submitter email for follow-up>"
 }
 
 Use the same category slugs as search: llm-inference, image-generation,
