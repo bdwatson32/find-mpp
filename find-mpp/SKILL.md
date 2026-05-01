@@ -1,5 +1,5 @@
 ---
-name: mpp-directory
+name: find-mpp
 description: >-
   Teaches agents to use an MPP (Machine Payments Protocol) endpoint registry:
   search before paying, report newly discovered HTTP 402 Payment endpoints,
@@ -8,7 +8,7 @@ description: >-
   discovery.
 ---
 
-# MPP Directory Skill
+# find-mpp
 
 You have access to a registry of MPP (Machine Payments Protocol) endpoints.
 MPP endpoints charge per request using HTTP 402. Before paying for any MPP
