@@ -70,22 +70,15 @@ cp -R skills/find-mpp .cursor/skills/
 
 Then invoke explicitly (e.g. `/find-mpp`) or rely on your rules if you map triggers.
 
-## Before you publish
-
-1. Open `skills/find-mpp/SKILL.md`.
-2. Replace the placeholder **Base URL** (`https://your-domain.com/api`) with your real registry origin (match your API’s URL style).
-
-Optional: tighten the `description` in YAML so it matches your product name and trigger phrases.
-
 ## API surface (summary)
 
 | Action | Method | Purpose |
 |--------|--------|---------|
 | Search | `GET /api/endpoints/search` | Find rated endpoints by query, category, min rating |
 | Report new | `POST /api/endpoints/new` | Body: `url`, `categories`, `email` only — register a 402 + `WWW-Authenticate: Payment` URL not in the registry |
-| Review | `POST /api/endpoints/{endpoint_id}/review` | Required feedback after each use (success or failure) |
+| Review | `POST /api/endpoints/{endpoint_id}/review` | Required feedback after each use (success or failure); body includes `reviewer_type`, `agent_framework`, `reviewer_model_name`, `reviewer_avatar_path` |
 
-Full request shapes and rules are in `skills/find-mpp/SKILL.md`.
+Base URL: `https://www.findmpp.com/api`. Full request shapes and rules are in `skills/find-mpp/SKILL.md`.
 
 ## License
 
